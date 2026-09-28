@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header { text-align: center; margin-bottom: 20px; }
+h1 { color: #f68b1f; margin: 5px; }
+
+.game-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* Panel de controles */
+.panel-control {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.dado-seccion {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    text-align: center;
+}
+#btn-dado {
+    background-color: #f68b1f;
+    color: white; border: none; font-size: 18px; font-weight: bold;
+    padding: 12px 25px; border-radius: 6px; cursor: pointer; width: 100%;
+}
+#btn-dado:hover { background-color: #e07a16; }
+#btn-dado:disabled { background-color: #444; cursor: not-allowed; }
+#resultado-dado {
+    font-size: 40px; margin-top: 10px; font-weight: bold; color: #00a2ff;
+}
+
+.desafio-box {
+    background-color: #1e1e1e; padding: 20px; border-radius: 8px;
+    border: 1px solid #333; min-height: 220px;
+}
+.desafio-title { font-weight: bold; color: #00e676; margin-bottom: 10px; }
+.btn-opcion {
+    background-color: #2a2a2a; color: white; border: 1px solid #444;
+    padding: 10px; width: 100%; text-align: left; margin-bottom: 8px;
+    border-radius: 4px; cursor: pointer;
+}
+.btn-opcion:hover { background-color: #3a3a3a; }
+#feedback-desafio { font-weight: bold; margin-top: 10px; }
+.correcto { color: #69f0ae; }
+.incorrecto { color: #ff5252; }
+
+/* Tablero de juego */
+.tablero-seccion {
+    flex: 1.2;
+    background-color: #1e1e1e; padding: 20px; border-radius: 8px;
+    border: 1px solid #333;
+}
+.marcador-posicion { font-size: 18px; font-weight: bold; margin-bottom: 15px; }
+.tablero-grid {
+    display: flex; flex-direction: column; gap: 10px;
+}
+.casilla {
+    background-color: #2a2a2a; border: 2px solid #444; border-radius: 6px;
+    padding: 15px; font-size: 16px; font-weight: bold; display: flex;
+    justify-content: space-between; align-items: center; position: relative;
+}
+.casilla.activa { border-color: #00a2ff; background-color: #153450; }
+.casilla.meta { background-color: #1b5e20; border-color: #4caf50; }
+.token-noob {
+    background-color: #ffeb3b; color: #000; padding: 2px 8px;
+    border-radius: 12px; font-size: 12px; border: 1px solid #000;
+}
+
+/* Modal */
+.modal {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.85); justify-content: center; align-items: center;
+}
+.modal-content {
+    background-color: #1e1e1e; padding: 30px; border-radius: 12px;
+    text-align: center; border: 2px solid #f68b1f;
+}
+.modal-content button {
+    background-color: #00e676; border: none; padding: 12px 25px;
+    font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 15px;
+}

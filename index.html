@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Studio - Carrera de Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎲 Roblox Studio: Carrera de Dados</h1>
+        <p>¡Lanza el dado, avanza por las casillas y responde correctamente para llegar a la meta!</p>
+    </header>
+
+    <div class="game-layout">
+        <!-- Panel Izquierdo: Control del Dado y Desafíos -->
+        <div class="panel-control">
+            <div class="dado-seccion">
+                <button id="btn-dado" onclick="lanzarDado()">🎲 Lanzar Dado</button>
+                <div id="resultado-dado">-</div>
+            </div>
+            
+            <div class="desafio-box" id="caja-desafio">
+                <div class="desafio-title">📢 Estado del Servidor</div>
+                <p id="texto-desafio">¡Lanza el dado para iniciar tu aventura en el servidor!</p>
+                <div id="opciones-contenedor"></div>
+                <div id="feedback-desafio"></div>
+            </div>
+        </div>
+
+        <!-- Panel Derecho: El Tablero Visual -->
+        <div class="tablero-seccion">
+            <div class="marcador-posicion">📍 Casilla Actual: <span id="posicion-texto">0</span> / 10</div>
+            <div class="tablero-grid" id="tablero">
+                <!-- Las casillas se generan dinámicamente con JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Victoria -->
+    <div id="modal-victoria" class="modal">
+        <div class="modal-content">
+            <h2>🏆 ¡Desarrollador Estrella!</h2>
+            <p>Has superado todos los bugs y completado el despliegue del juego.</p>
+            <button onclick="reiniciarJuego()">🔄 Volver a Jugar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
